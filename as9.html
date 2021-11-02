@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>AS-9 zoom </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<header>
+  <h2>Hello, AS-9 Students</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Notice</a></li>
+      <li><a href="#">Activity</a></li>
+      <li><a href="AS-9/University.html">University</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Notice: </h1>
+        <ul>
+      <li>桌肚清空</li>
+      <li>离沪返校需要核酸检测报告.</li>
+    </ul>
+
+
+<a href="AS-9/Mid-term exam timetable (21-22 S1).pdf" target="_blank">Mid-term Exam Arrangement   </a>
+
+
+ 
+  </article>
+</section>
+
+<footer>
+  <p>ZE KON DAN BEN, LEI DOU DAN YE</p>
+</footer>
+
+<a href="index.html" class="previous">&laquo; Previous</a>
+
+</body>
+</html>
+
+
+
