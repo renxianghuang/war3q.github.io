@@ -97,14 +97,24 @@ footer {
    <script>document.getElementById('now').value = Date().toString();</script>
 </body> 
 
-
-    <time itemprop="datePublished" datetime="2014-07-02"> </time>
+<p id="sudo"></p >
+  
+    <script>
+        /* Function to use lastModified property */
+        function geeks() {
+            var x = document.lastModified;
+            document.getElementById("sudo").innerHTML = x;
+        }
+    </script>
+   
   </article>
 </section>
 
 <footer>
   <p>ZE KON DAN BEN, LEI DOU DAN YE</p>
 </footer>
+
+
 
 </body>
 </html>
