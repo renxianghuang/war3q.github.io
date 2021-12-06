@@ -105,9 +105,9 @@ footer img   {
   display: inline-block; 
   color: rgb(223, 16, 44);
   border: 2px solid rgb(167, 14, 129);
-  border-radius: 2px;
-  padding: 10px 15px;
-  margin-right: 10px;
+  border-radius: 5px;
+  padding: 4px 6px;
+  margin-right: 5px;
   text-decoration: none;
   font-size: 15px;
 }
