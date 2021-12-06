@@ -87,7 +87,7 @@ footer img   {
   background-size: cover;
 }
 .hero-content   {
-  color: rgb(11, 126, 87);
+  color: rgb(238, 247, 244);
   padding-top: 130px;
 }
 .hero-content h1   {
@@ -103,8 +103,8 @@ footer img   {
 }
 .hero-content a    {
   display: none; 
-  color: rgb(223, 16, 44);
-  border: 2px solid rgb(167, 14, 129);
+  color: rgb(57, 223, 16);
+  border: 2px solid rgb(248, 246, 247);
   border-radius: 5px;
   padding: 4px 6px;
   margin-right: 5px;
