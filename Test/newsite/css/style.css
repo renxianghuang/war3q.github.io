@@ -95,7 +95,7 @@ footer img   {
   margin: 0;
 }
 .hero-content p    {
-  font-size: 50px;
+  font-size: 30px;
 }
 .hero-content a    {
   display: inline-block;
@@ -105,7 +105,7 @@ footer img   {
   padding: 15px 30px;
   margin-right: 20px;
   text-decoration: none;
-  font-size: 28px;
+  font-size: 15px;
 }
 
 /* basic site sections */
