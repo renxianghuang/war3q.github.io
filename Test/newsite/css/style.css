@@ -101,6 +101,22 @@ footer img   {
 .hero-content p    {
   font-size: 30px;
 }
+
+.hero-content  ul   {
+  list-style: circle;
+  margin: 0;
+  font-size: 30px;
+}
+
+.hero-content ul li {
+  background: #cce5ff;
+  margin: 5px;
+  font-size: 30px;
+}
+
+
+
+
 .hero-content a    {
   display: none; 
   color: rgb(57, 223, 16);
