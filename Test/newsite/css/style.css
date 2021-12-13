@@ -88,6 +88,7 @@ footer img   {
 .hero-content   {
   color: rgb(238, 247, 244);
   padding-top: 30px;
+  text-align: left;
 }
 .hero-content h1   {
   font-size: 40px;
