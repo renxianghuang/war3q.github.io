@@ -86,7 +86,7 @@ footer img   {
   background-size: cover;
 }
 .hero-content   {
-  color: rgb(238, 247, 244);
+  color: rgb(12, 72, 202);
   padding-top: 30px;
   text-align: left;
 }
@@ -95,31 +95,20 @@ footer img   {
   margin: 0;
 }
 .hero-content h3   {
-  font-size: 50px;
+  font-size: 30px;
   margin: 0;
 }
 .hero-content p    {
   font-size: 30px;
-}
-
-.hero-content  ul   {
-  list-style: circle;
-  margin: 0;
-  font-size: 30px;
-}
-
-.hero-content ul li {
-  background: #cce5ff;
-  margin: 5px;
-  font-size: 30px;
+  color: rgb(0, 247, 255);
 }
 
 
 
 
 .hero-content a    {
-  display: none; 
-  color: rgb(57, 223, 16);
+  display: inline-block; 
+  color: rgb(116, 223, 16);
   border: 2px solid rgb(248, 246, 247);
   border-radius: 5px;
   padding: 4px 6px;
