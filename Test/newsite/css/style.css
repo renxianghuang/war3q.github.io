@@ -84,10 +84,12 @@ footer img   {
   min-height: 800px;
   text-align: center; 
   background-size: cover;
+  background-color: #222;
 }
 .hero-content   {
-  color: rgb(12, 72, 202);
+  color: #FFF;
   padding-top: 30px;
+  text-decoration: none;
   text-align: left;
 }
 .hero-content h1   {
