@@ -1,0 +1,67 @@
+\documentclass[a4paper]{article}
+\usepackage{fullpage} % Package to use full page 
+\usepackage{tikz} % Package for drawing
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{multirow} 
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{siunitx} %% units
+\usepackage[inline]{enumitem}%%%%% enumerate setting
+\usepackage{hyperref}
+% \usepackage{nopageno} %%% if no page number needed 
+
+\usepackage{aircraftshapes} %%% helicopter draw by github source
+
+%\usepackage{wrapfig} %% wrap figures
+\usepackage{rotating}  %% table  symbol rotate 
+
+\usetikzlibrary{decorations.pathmorphing, patterns,arrows} %%% draw springs
+	
+\usetikzlibrary{shapes.geometric} %% draw ellipse
+
+\usetikzlibrary{trees} %% draw tree diagram
+\usetikzlibrary{calc}  %%% sqrt calculation
+
+\usepackage{amssymb}
+
+\setlength{\parindent}{0pt} %%% global setting for paragraph indent.
+
+\newcounter{Exercise}  %%% define the Exercise number %% put [section] after {Exercise} if needed
+\newcommand\exercise{\vspace{1cm}\par\noindent\stepcounter{Exercise} \textbf{Exercise}  \theExercise} %% define the default Exercise style
+
+\newcounter{Miscellaneous}  %%% define the Miscellaneous exercise number %% put [section] after {Exercise} if needed
+\newcommand\mis{\vspace{1cm}\par\noindent\stepcounter{Miscellaneous} \textbf{Miscellaneous exercise}  \theMiscellaneous} %% define the default Miscellaneous Exercise style
+
+\newcounter{Examstyle}  %%% define the Exam style exercise number %% put [section] after {Exercise} if needed
+\newcommand\exam{\vspace{1cm}\par\noindent\stepcounter{Examstyle} \textbf{Exam-style Questions}  \theExamstyle} %% define the default Miscellaneous Exercise style
+
+
+\renewcommand{\familydefault}{\sfdefault} %% sans font as a default 
+ 
+
+\let\tempone\itemize  %% change the default itemize space
+\let\temptwo\enditemize
+\renewenvironment{itemize}{\tempone\addtolength{\itemsep}{2\baselineskip}}{\temptwo}
+
+
+\pgfplotsset{my style/.append style={axis lines=center,
+		xmajorticks=true, 	 
+		ymajorticks=true,
+		xlabel={$x$},
+		ylabel={$y$},
+		x label style={=at={(current axis.right of origin), anchor=north},right =2mm},	
+		y label style={=at={(current axis.up of origin), anchor=north},above=1mm}}}
+%% default setting for x-y plane
+ 
+\begin{document}
+	\input{Sections/Representation of data}
+	\input{Sections/Permutations and combinations}
+	\input{Sections/Probability}
+	\input{Sections/Discrete random variables}
+	
+    
+\end{document}

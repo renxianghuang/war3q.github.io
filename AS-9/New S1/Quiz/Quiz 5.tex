@@ -1,0 +1,307 @@
+\documentclass[11pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{parskip}
+\usepackage{enumitem}%%%%% enumerate setting
+\setenumerate{label=(\roman*),itemsep=3pt,topsep=3pt}
+\usepackage{siunitx}%%% unit
+\usepackage{derivative}
+\usepackage{physics}
+\usepackage{hyperref}
+\usepackage{tikz} %%% tikz
+\usepackage{pgfplots}  %%% pgf plots
+\usepgfplotslibrary{fillbetween} %%% fill between
+\usepackage{color}
+\usetikzlibrary{decorations.pathmorphing, patterns} %%% draw springs
+
+\usetikzlibrary{calc}  %%% sqrt calculation
+
+\newcommand{\ee}{\mathrm{e}}
+
+\newcommand{\id}{\mathrm{\,d}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\rp}{\mathrm{Re\,}}
+
+\newcommand{\vi}{\mathbf{i}}
+\newcommand{\vj}{\mathbf{j}}
+\newcommand{\vk}{\mathbf{k}}
+\newcommand{\DAG}{(\textbf{\dag})\qquad}
+\newcommand{\DDAG}{(\textbf{\ddag})\qquad}
+
+\usepackage{amssymb}
+\usetikzlibrary{patterns}
+\usepackage{graphicx,tipa}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}
+% Margins
+\usepackage[top=1cm, left=2cm, right=2cm, bottom=2.0cm]{geometry}
+% Colour table cells
+%\usepackage[table]{xcolor}
+\usepackage{multido}
+
+% Get larger line spacing in table
+\newcommand{\tablespace}{\\[1.25mm]}
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
+\newcommand\tstrut{\rule{0pt}{2.0ex}}         % = `top' strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
+
+\renewcommand{\familydefault}{\sfdefault} %% sans font as a default 
+\DeclareSIUnit{\ft}{ft} %%%%%%% feet unit
+\DeclareMathOperator{\cosec}{cosec}  %%% cosec 
+%% multiple dot lines setting
+\newcommand{\Pointilles}[2][2]{%
+\par\nobreak
+\noindent\rule{0pt}{1.5\baselineskip}% Provides a larger gap between the preceding paragrahp and the dots
+\multido{}{#2}{\noindent\makebox
+[\linewidth]{\rule{0pt}{#1\baselineskip}\dotfill}\\}% ...dotted lines...
+\bigskip % Gap between dots and next paragraph
+}
+
+\pgfplotsset{every axis/.append style={
+		axis x line=middle,    % put the x axis in the middle
+		axis y line=middle,    % put the y axis in the middle
+		axis line style={->}, % arrows on the axis
+		axis equal,
+	xmajorticks=false, 	 
+	ymajorticks=false,
+	unit vector ratio*=1 1 1,
+	enlarge x limits=false,
+	xlabel={$x$},
+	ylabel={$y$},
+	x label style={=at={(current axis.right of origin), anchor=north},right =0.8mm},	
+	y label style={=at={(current axis.up of origin), anchor=north},above=0.8mm}	
+}}
+       %%%%%%%  axis setting
+\pgfplotsset{my style/.append style={axis lines=center,
+		xmajorticks=true, 	 
+		ymajorticks=true,
+		xlabel={$x$},
+		ylabel={$y$},
+		x label style={=at={(current axis.right of origin), anchor=north},right =2mm},	
+		y label style={=at={(current axis.up of origin), anchor=north},above=1mm}}}
+%% default setting for x-y plane
+
+
+%%%%%%%%%%%%%%%%%
+%     Title     %
+%%%%%%%%%%%%%%%%%
+%\title{Further Mechanics } 
+%\author{\textbf{\Large{Mock Exam}} \\\,\\ Date: \today}
+%\date{}
+\begin{document}
+
+%\maketitle 
+\begin{center}
+	
+	\vspace*{-1.2cm}
+	
+	\includegraphics[scale=0.8]{schoollogo.pdf}
+	
+	
+	\bigskip
+	
+	{\Huge\bf Quiz 5}
+	
+
+	
+	\bigskip
+	{\LARGE\bf 
+		
+		\begin{tabular}{l@{\hspace{1cm}}l}
+			
+			Grade & AS \\[0.5ex]
+			
+			Subject & Pure Mathematics   \\[0.5ex]
+			
+			Paper Name & Paper 3  \\[0.5ex]
+			
+			Duration & 60 minutes
+			
+		\end{tabular}
+		
+	}
+	
+\end{center}
+\bigskip
+
+
+{\LARGE\bf Student's Information}
+\vspace{0.5cm}
+
+{\LARGE
+	\begin{tabular}{|p{6cm}|p{6cm}|p{2.2cm}|p{2.2cm}|}
+		\hline \rule[-1ex]{0ex}{3.5ex}Name (Pinyin) & English Name & Class
+		& Group
+		\\ \hline \rule[-1ex]{0ex}{3.5ex} & & & \\
+		\hline
+	\end{tabular}
+} \bigskip
+
+
+{\LARGE\bf Instructions}
+
+
+{\large
+	
+	\begin{itemize}
+		
+		\item Answer {\bf all} questions.
+		
+		\item Use a black or dark blue pen. You may use an HB pencil for
+		any diagrams or graphs.
+		
+		\item Do {\bf not} use an erasable pen or correction fluid.
+		
+		\item Write your answer to each question in the space provided.
+		
+		\item If additional space is needed, you should use the lined page
+		at the end of this booklet; the question number or numbers must be
+		clearly shown.
+		
+		\item You should use a calculator where appropriate.
+		
+		\item You must show all necessary working clearly; no marks will
+		be given for unsupported answers from a calculator.
+		
+		\item Give non-exact numerical answers correct to $3$ significant
+		figures, or $1$ decimal place for angles in degrees, unless a
+		different level of accuracy is specified in the question.
+		
+		\item {\bf You are reminded of the need for clear representation
+			in your answers.}
+	\end{itemize}
+	
+}
+\vfill 
+\medskip
+{\LARGE\bf Information:} 
+
+\begin{itemize}
+	
+	\item The total mark for this paper is $60$. 
+	
+	\item The number of marks for each question or part question is
+	shown in brackets [\ ].
+	
+\end{itemize}
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+\thispagestyle{empty} %%%% Cover without page number
+\clearpage   %%% Start the page number from 1  again.
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+%   Problem    %%%
+%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+%%% Quiz 8 by Alan New P3 %%%
+%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+
+By the proposed method or hints (if any), or otherwise, evaluate each of the following integrals, giving all your answers in exact forms wherever appropriate.
+\begin{enumerate}[label=\arabic*.]
+	
+	%% --Q1
+	\item $\displaystyle{\int \frac{\ln x}{x}\id x}$ \hfill [3]
+	\Pointilles{9}
+	
+	%% --Q2
+	\item $\displaystyle{\int \frac{1}{x^3-x}\id x}$; \qquad by first decomposing into partial fractions \hfill [5]
+	\Pointilles{9}
+	
+	%% --Q3
+	\item $\displaystyle{\int_2^3 \frac{x}{x^2+1}\id x}$; \qquad by substitution \hfill [5]
+	\Pointilles{10}
+	
+	%% --Q4
+	\item $\displaystyle{\int_2^3 \frac{x}{x^2-1}\id x}$ \hfill [5]
+	
+	\Pointilles{10}
+	
+	%% --Q5
+	
+	
+	\item $\displaystyle{\int_0^4 x\sqrt{2x+1}\id x}$ \hfill [5]
+	
+	\Pointilles{10}
+	
+	%% --Q6
+	
+	
+	
+	
+	
+	\item $\displaystyle{\int \frac{x}{x^2+x+1}\id x}$; \qquad \hfill  [5]
+	
+	
+	\Pointilles{10}
+	
+	%% --Q7
+	\item $\displaystyle{\int_0^{\pi^2} \sin\sqrt{x}\id x}$; \qquad by using a suitable substitution, followed by integration by parts \hfill [6]
+	
+	
+	\Pointilles{10}
+	
+	%% --Q8
+	
+	
+	
+	
+	\item $\displaystyle{\int_1^2 \frac{\ee^{\frac{1}{x}}}{x^3}\id x}$ \hfill [6]
+	\Pointilles{10}
+	
+	%% --Q9
+	\item $\displaystyle{\int \ee^{-x}\sin 2x\id x}$; \qquad by applying integration by parts twice \hfill [6]
+	\Pointilles{10}
+	
+	%% --Q10
+	\item $\displaystyle{\int_0^{\frac{\pi}{4}} \sin x\cos 2x\id x}$ \hfill [6]
+	\Pointilles{10}
+	
+	%% --Q11
+	\item $\displaystyle{\int_{-\frac{1}{2}}^{\frac{1}{2}} \frac{x^3+x^2-x+1}{x^4-1}\id x}$; \qquad by first decomposing into partial fractions \hfill [8]
+	\Pointilles{22}
+	
+	
+	
+\end{enumerate}
+\vfill
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots$  THE END $\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots$
+%\newpage
+%\begin{center} 
+	%\LARGE BLANK PAGE
+%\end{center}
+
+\end{document}
